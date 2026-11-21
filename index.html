@@ -12890,6 +12890,15 @@
     });
     </script>
 
+<style id="dock-overlap-fix">
+/* Bottom-right dock: Quick FAB (bottom) -> AI Assistant (above) -> modal above it. Install pill stays beside FAB. */
+#polashAiBtn{bottom:94px!important;right:22px!important}
+#aiModal{bottom:150px!important;right:22px!important}
+@media (max-width:640px){
+#polashAiBtn{bottom:154px!important;right:16px!important}
+#aiModal{bottom:210px!important;right:16px!important}
+}
+</style>
 </body>
 
 </html>
