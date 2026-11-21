@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-21",
   "note": "Free tiers change often — visit the official site for the latest limits.",
   "tools": [
     {
@@ -131,6 +131,14 @@
       "free": "Included in ChatGPT plans (limited)",
       "best": "OpenAI-র কোডিং এজেন্ট",
       "url": "https://github.com/openai/codex"
+    },
+    {
+      "n": "AIxploria",
+      "cat": "research",
+      "free": "Free AI tools directory (categories)",
+      "best": "নতুন AI টুল খোঁজা ও ক্যাটাগরি-ভিত্তিক তুলনা",
+      "url": "https://www.aixploria.com/en/categories-ai/",
+      "d": "হাজারো AI টুলের ক্যাটাগরি-ভিত্তিক ডিরেক্টরি — নতুন টুল খুঁজতে সেরা"
     }
   ]
 }

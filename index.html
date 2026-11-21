@@ -9240,7 +9240,7 @@
                 }).join("") + "</div>" + '<div id="vidOut"></div>' + '<div class="label" style="margin-top:12px">Trigger workflow</div>' + '<div style="font-size:11.5px;color:var(--text-2);line-height:1.8">HeyGen / InVideo API placeholders via <b>POST /api/video-job</b> &middot; n8n / Make listener at <b>POST /webhooks/n8n</b>.</div>' + "</div>" + "</div>" + '<div class="card" style="margin:6px 0 18px"><h3 style="font-size:15px;font-weight:830;margin-bottom:10px">' + icon("search", 14) + " AI SEO Audit Form — Lead Pipeline</h3>" + '<div style="font-size:12px;color:var(--text-2);margin-bottom:12px">Client submits a URL → simulated background fetch → structured JSON analysis → n8n drafts the email report.</div>' + '<div class="grid grid-2" style="gap:10px">' + '<div class="field"><label class="label">Website URL *</label><input class="input" id="seoFormUrl" placeholder="https://client-site.com"></div>' + '<div class="field"><label class="label">Lead name</label><input class="input" id="seoFormName" placeholder="Client name"></div>' + '<div class="field"><label class="label">Lead email</label><input class="input" id="seoFormEmail" type="email" placeholder="client@email.com"></div>' + '<div class="field" style="display:flex;align-items:flex-end;gap:8px"><button class="btn btn-primary btn-sm" onclick="runSeoLeadAudit()">Run Audit &amp; Draft Report</button><button class="btn btn-ghost btn-sm" onclick="copySeoLeadJson()">Copy JSON</button><button class="btn btn-ghost btn-sm" onclick="sendSeoLeadWebhook()">Send to n8n</button></div>' + "</div>" + '<div id="seoFormStages" style="margin:14px 0 4px;display:flex;gap:8px;flex-wrap:wrap"></div>' + '<pre class="seo-json" id="seoFormOut">// structured JSON report renders here after the audit</pre></div>' + '<div class="card" style="margin:6px 0 30px"><h3 style="font-size:15px;font-weight:830;margin-bottom:10px">' + icon("layers", 14) + " Integration files (repository)</h3>" + '<table class="table"><thead><tr><th>File</th><th>Purpose</th></tr></thead><tbody>' + "<tr><td><b>server/server.js</b></td><td>Express API &mdash; /api/codegen (OpenAI/Claude) &middot; /api/seo-audit &middot; /api/video-job &middot; /webhooks/n8n</td></tr>" + "<tr><td><b>server/.env.example</b></td><td>OPENAI_API_KEY &middot; CLAUDE_API_KEY &middot; HEYGEN_API_KEY &middot; INVIDEO_API_KEY</td></tr>" + "<tr><td><b>agent/.aider.conf.yml</b></td><td>Aider autonomous coding agent configuration</td></tr>" + "<tr><td><b>agent/AGENTS.md</b></td><td>Agent pipeline instructions (Aider / Aether)</td></tr>" + "<tr><td><b>agent/scripts/run-agent-pipeline.sh</b></td><td>Local automated agent pipeline runner</td></tr>" + "</tbody></table></div>"
             };
             var FREEAI = {
-                "updated": "2026-10-31",
+                "updated": "2026-11-21",
                 "note": "Free tiers change often — visit the official site for the latest limits.",
                 "tools": [{
                     "n": "ChatGPT",
@@ -9355,6 +9355,14 @@
                     "free": "Included in ChatGPT plans (limited)",
                     "best": "OpenAI-র কোডিং এজেন্ট",
                     "url": "https://github.com/openai/codex"
+                },
+                {
+                    "n": "AIxploria",
+                    "cat": "research",
+                    "free": "Free AI tools directory (categories)",
+                    "best": "নতুন AI টুল খোঁজা ও ক্যাটাগরি-ভিত্তিক তুলনা",
+                    "url": "https://www.aixploria.com/en/categories-ai/",
+                    "d": "হাজারো AI টুলের ক্যাটাগরি-ভিত্তিক ডিরেক্টরি — নতুন টুল খুঁজতে সেরা"
                 }]
             };
             var FREEAI_CAT = "all",
@@ -9425,7 +9433,8 @@
                 var rec = [
                     ["📱", "ফোন থেকে পুরো প্রজেক্ট", "বাংলা গাইডে সাইট+অ্যাপ বানানো, GitHub push — Arena Agent Mode এখানেই এগিয়ে (ফাইল বানানো, কোড চালানো, APK বিল্ডের মতো আসল কাজ করে দেয়)।"],
                     ["💻", "ল্যাপটপে বসে কোডিং", "OpenCode বা Google Antigravity ফ্রি-তে বসিয়ে নিন — নিজের এডিটরে পুরোদমে কোডিং এজেন্ট।"],
-                    ["✍️", "লেখা ও রিসার্চ", "Claude Free (লেখা) + Perplexity (সোর্সসহ রিসার্চ) পাশাপাশি রাখুন।"]
+                    ["✍️", "লেখা ও রিসার্চ", "Claude Free (লেখা) + Perplexity (সোর্সসহ রিসার্চ) পাশাপাশি রাখুন।"],
+                    ["🔎", "নতুন AI টুল খুঁজতে", "AIxploria — ক্যাটাগরি ধরে হাজারো AI টুল খুঁজুন ও তুলনা করুন: aixploria.com/en/categories-ai"]
                 ];
                 return '<div class="page-hero"><h1>Free AI <span class="grad">Hub</span></h1><p>কোন ফ্রি AI কোন কাজে সেরা — সৎ তুলনামূলক রিপোর্ট, তারপর সব টুলের লাইভ ডিরেক্টরি। প্রতিটার পাশে সরাসরি লিংক — ক্লিক করলেই গিয়ে কাজ শুরু।</p></div>' +
                     '<div class="card" style="margin-top:20px;padding:22px">' +
